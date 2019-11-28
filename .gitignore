@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/node,macos,webstorm,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,macos,webstorm,visualstudiocode
 
+dist/*.js
+
 ### macOS ###
 # General
 .DS_Store
@@ -225,4 +227,3 @@ fabric.properties
 # End of https://www.gitignore.io/api/node,macos,webstorm,visualstudiocode
 
 # Custom
-dist/*
