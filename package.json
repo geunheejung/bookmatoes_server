@@ -15,9 +15,11 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
     "selenium-webdriver": "^4.0.0-alpha.5",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.7.2",
@@ -25,7 +27,7 @@
     "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "start": "tsc && node dist && yarn test",
+    "start": "nodemon --watch src --delay 1 --exec ts-node src/index.ts",
     "test": "jest"
   }
 }

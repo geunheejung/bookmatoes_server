@@ -1,12 +1,12 @@
 import app from './app';
-import { getSellerList } from './helper';
+import { getSellerLinkList } from './helper';
 
 
-app.get('/rating/:bookId', (req, res) => {
+app.get('/rating/:bookId', async (req, res) => {
   const { params: { bookId } } = req;  
   const url = `https://search.daum.net/search?w=bookpage&bookId=${bookId}`;
 
-  getSellerList(url);
+  const sellerUrlList = await getSellerLinkList(url);
 
   res.status(200).json({
     status: 200,
