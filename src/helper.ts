@@ -28,7 +28,7 @@ export const selenum = async <T>(
 export const getSellerLinkList = async (url: string) => {
   const worker = async (driver: WebDriver) => {
     try {
-      const xpath = `//ul[@class='list_sale']/li/acx`;
+      const xpath = `//ul[@class='list_sale']/li/a`;
       const sellerList = await driver.findElements(By.xpath(xpath));
       const hrefList = await Promise.all(
         sellerList.map(
