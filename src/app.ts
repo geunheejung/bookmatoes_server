@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 
 class Server {
   private static _app: Server;
@@ -21,6 +22,8 @@ class Server {
     const { isInit, applicatipon, port } = this;
 
     if (isInit) return;
+
+    applicatipon.use(cors());
 
     applicatipon.get('/', (req, res, next) => {
       res.send('Hello Express World');

@@ -2,7 +2,6 @@ import { Builder, By, WebDriver } from 'selenium-webdriver';
 
 type Worker<T> = (driver: WebDriver) => Promise<T>;
 
-
 class ApiError extends Error {
   constructor(m: string) {
     super(m);
